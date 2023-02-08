@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="basket">
+    <header class="wrapper">
+      <h1>Sports Clothing</h1>
+      <div class="basket-icon">
+        <img src="/Demo-2/assets/Image/Basket.svg" alt="basket-img" />
+      </div>
+    </header>
+    <main class="wrapper">
+      <section>
+        <ul class="products">
+          <li>
+            <img src="/Demo-2//assets/Image/dress.svg" alt="dress-image" />
+            <h3>Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/dress-7.svg" alt="dress-image" />
+            <h3>Short Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/froke.svg" alt="image" />
+            <h3>Medium Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/t-shirt.svg" alt="t-shirt-image" />
+            <h3>Medium Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/1.svg" alt="cloth-image" />
+            <h3>Medium Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/dress-6.svg" alt="dress-image" />
+            <h3>Medium Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/dress-5.svg" alt="dress-image" />
+            <h3>Medium Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="/Demo-2//assets/Image/2.svg" alt="dress-image" />
+            <h3>Medium Dress</h3>
+            <div class="btn">
+              <button class="add-to-cart-btn" role="button">
+                Add to Basket
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      $("button").on("click", function () {
+        $(this).closest("li").find("img").addClass("zoom").appendTo("body");
+        setTimeout(function () {
+          $(".zoom").remove();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

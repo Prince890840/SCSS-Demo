@@ -1,0 +1,132 @@
+.basket {
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  width: 90%;
+}
+
+header.wrapper {
+  padding: 0px 100px 0px 100px;
+  border: 1px solid #eee;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .basket-icon img {
+  height: 80px;
+  width: 80px;
+}
+
+main {
+  width: 90%;
+}
+
+main.wrapper {
+  padding: 0px 100px;
+}
+
+main section ul.products img {
+  height: 180px;
+  width: 250px;
+}
+
+section ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section ul li {
+  margin-top: 30px;
+}
+
+section ul li h3 {
+  text-align: center;
+}
+
+section ul li .btn {
+  margin-left: 65px;
+}
+
+/* CSS */
+.add-to-cart-btn {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.add-to-cart-btn:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2c974b;
+}
+
+.add-to-cart-btn:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+.add-to-cart-btn:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+.zoom {
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  width: 40px;
+  opacity: 0;
+  animation: zoom 1s ease forwards;
+  /* ease - timing function, it's looks so nature,
+     forwards - its moving an element in forwards until react out to the basket */
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    right: 48px;
+  }
+}
