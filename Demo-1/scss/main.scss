@@ -1,0 +1,45 @@
+@import "./resets";
+@import "./variables";
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($theme-color, 100%);
+    color: darken($text-color, 100%);
+  }
+}
+
+body {
+  background: $theme-color;
+  color: $text-color;
+  font-weight: map-get($font-weights, bold);
+}
+
+.main {
+  @include flexCenter(column);
+  width: 80%;
+  margin: 0 auto;
+
+  &_paragraph {
+    font-weight: weight(regular);
+
+    &:hover {
+      color: pink;
+      cursor: pointer;
+    }
+  }
+}
+
+.light {
+  @include theme($light-theme: true);
+}
